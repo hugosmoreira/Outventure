@@ -9,9 +9,13 @@ export default function RegisterPage() {
   function registerUser(ev) {
     ev.preventDefault();
     
-  axios.get('http://169.254.123.121:4000/test')
-  .then((data) => console.log(data));
+    axios.post('/register', {
+      name,
+      email,
+      password
+    } )
     
+      
   }
 
   return (

@@ -12,11 +12,12 @@ export default function LoginPage() {
     ev.preventDefault();
     try {
       const {data} = await axios.post('/login', {email,password});
-      setUser(data);
+      //setUser(data);
       alert('Login successful');
       setRedirect(true);
     } catch (e) {
       alert('Login failed');
+      console.log(e);
     }
   }
 
